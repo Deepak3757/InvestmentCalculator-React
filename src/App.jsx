@@ -14,7 +14,8 @@ function App() {
     setUserInput((prevInput) => {
       return {
         ...prevInput,
-        [inputIdentifier]: newValue,
+        [inputIdentifier]: +newValue, 
+        // '+' will convert newValue to a Number(otherwise it is a string)
       };
     });
   }
